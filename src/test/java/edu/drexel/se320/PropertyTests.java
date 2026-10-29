@@ -41,7 +41,7 @@ public class PropertyTests extends BinarySearchBase {
                 array[1] = array[0];
                 Arrays.sort(array);
             }
-            int target = 0;
+            int target=0;
             if (array.length > 0){
                 target = array[0];
             }
@@ -54,7 +54,7 @@ public class PropertyTests extends BinarySearchBase {
         Assume.that(array.length > 0);
         int target = array[index % array.length];
         int result = find(array, target);
-        return result >= 0 && result < array.length && array[result].equals(target);
+        return result>= 0 && result < array.length && array[result].equals(target);
     }
 
     @Property
@@ -69,7 +69,7 @@ public class PropertyTests extends BinarySearchBase {
         Assume.that(array.length > 0);
         int target = array[0];
         int result = find(array, target);
-        return result >= 0 && array[result].equals(target);
+        return result>=0 && array[result].equals(target);
     }
 
     @Property
@@ -77,7 +77,7 @@ public class PropertyTests extends BinarySearchBase {
         Assume.that(array.length > 0);
         int target = array[array.length - 1];
         int result = find(array, target);
-        return result >= 0 && array[result].equals(target);
+        return result>=0 && array[result].equals(target);
     }
 
     @Property
@@ -87,12 +87,12 @@ public class PropertyTests extends BinarySearchBase {
         int targetIndex = randomIndex % middleIndex;
         int target = array[targetIndex];
         int result = find(array, target);
-        return result >= 0 && result < array.length && array[result].equals(target);
+        return result >= 0 && result<array.length && array[result].equals(target);
     }
 
     @Property
     boolean testTargetIsInSecondHalfOfArray(@ForAll("sortedIntegerArraysGenerator") Integer[] array,
-            @ForAll @IntRange(min = 0, max = 15) int randomIndex) {
+            @ForAll @IntRange(min = 0, max = 15) int randomIndex){
         Assume.that(array.length >= 2);
         int middleIndex = array.length / 2;
         Assume.that(middleIndex < array.length);
@@ -100,12 +100,12 @@ public class PropertyTests extends BinarySearchBase {
         int targetIndex = middleIndex + (randomIndex% rangeSize);
         int target = array[targetIndex];
         int result = find(array, target);
-        return result >= 0 && result < array.length && array[result].equals(target);
+        return result>=0 && result < array.length && array[result].equals(target);
     }
 
     @Property
     boolean testTargetIsUniqueInArrayAndContainsDuplicateElements(@ForAll @IntRange(min = 10, max = 20) int duplicateValue,
-            @ForAll @Size(min = 5, max = 20) List<@IntRange(min = 0, max = 100) Integer> list) {
+            @ForAll @Size(min = 5, max = 20) List<@IntRange(min = 0, max = 100) Integer> list){
         list.set(0, duplicateValue);
         list.set(1, duplicateValue);
         Integer[] array = list.toArray(new Integer[0]);
@@ -122,7 +122,7 @@ public class PropertyTests extends BinarySearchBase {
         }
         Assume.that(foundUniqueValue);
         int result = find(array, target);
-        return result >= 0 && array[result].equals(target);
+        return result>=0 && array[result].equals(target);
     }
 
 
@@ -133,22 +133,21 @@ public class PropertyTests extends BinarySearchBase {
         Assume.that(array.length > 0);
         Assume.that(Arrays.asList(array).contains(target));
         int result = find(array, target);
-        return result >= 0 && result < array.length && array[result].equals(target);
+        return result>= 0 && result<array.length && array[result].equals(target);
     }
 
     @Property
-    boolean testEmptyArrayBehavior(@ForAll int target) {
+    boolean testEmptyArrayBehavior(@ForAll int target){
         Integer[] array = new Integer[0];
         assertThrows(IllegalArgumentException.class, () -> find(array, target));
         return true;
     }
 
     @Property
-    boolean testsingleElementInArray(
-            @ForAll @IntRange(min = 0, max = 100) int element,
-            @ForAll @IntRange(min = 0, max = 100) int target) {
+    boolean testsingleElementInArray(@ForAll @IntRange(min = 0, max = 100) int element,
+            @ForAll @IntRange(min = 0, max = 100) int target){
         Integer[] array = {element};
-        if (element == target){
+        if(element == target){
             return find(array, target)==0;
         } else {
             assertThrows(NoSuchElementException.class, () -> find(array, target));
@@ -159,7 +158,7 @@ public class PropertyTests extends BinarySearchBase {
     @Property
     boolean testUnsortedArrayWhenTargetIsInArray(@ForAll Integer[] unsortedArray, @ForAll @IntRange(min = 0, max = 29) int index){
         Assume.that(unsortedArray != null && unsortedArray.length > 0);
-        for (int i = 0; i < unsortedArray.length; i++) {
+        for(int i = 0; i < unsortedArray.length; i++) {
             Assume.that(unsortedArray[i] != null);
         }
         int target = unsortedArray[index % unsortedArray.length];
@@ -169,13 +168,13 @@ public class PropertyTests extends BinarySearchBase {
             return result >= 0
                     && result < unsortedArray.length
                     && unsortedArray[result].equals(target);
-        } catch (NoSuchElementException e) {
+        }catch (NoSuchElementException e){
             return true;
         }
     }
     @Property
     boolean testUnsortedArrayWhenTargetIsNotInArray( @ForAll Integer[] unsortedArray,
-            @ForAll @IntRange(min = 1, max= 29) int target) {
+            @ForAll @IntRange(min = 1, max= 29) int target){
         Assume.that(unsortedArray != null && unsortedArray.length > 0);
         for (int i = 0; i < unsortedArray.length; i++) {
             Assume.that(unsortedArray[i] != null);
