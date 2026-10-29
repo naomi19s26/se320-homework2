@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.drexel.se320.PropertyTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-28T21:42:19.649Z" hostname="NAOMI" time="1.921">
+<testsuite name="edu.drexel.se320.PropertyTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T03:17:07.455Z" hostname="NAOMI" time="1.865">
   <properties/>
-  <testcase name="testTargetIsInFirstHalfOfTheArray" classname="edu.drexel.se320.PropertyTests" time="1.017"/>
-  <testcase name="testTargetIsInSecondHalfOfArray" classname="edu.drexel.se320.PropertyTests" time="0.142"/>
-  <testcase name="testEmptyArrayBehavior" classname="edu.drexel.se320.PropertyTests" time="0.092"/>
-  <testcase name="testTargetIsDuplicateElement" classname="edu.drexel.se320.PropertyTests" time="0.045"/>
-  <testcase name="testTargetIsTheLastElementInTheArray" classname="edu.drexel.se320.PropertyTests" time="0.106"/>
-  <testcase name="testTargetDoesntExistInArray" classname="edu.drexel.se320.PropertyTests" time="0.126"/>
-  <testcase name="testTargetExistsInArray" classname="edu.drexel.se320.PropertyTests" time="0.078"/>
-  <testcase name="testTargetIsTheFirstElementInTheArray" classname="edu.drexel.se320.PropertyTests" time="0.049"/>
-  <testcase name="testsingleElementInArray" classname="edu.drexel.se320.PropertyTests" time="0.131"/>
-  <testcase name="testTargetIsUniqueInArrayAndContainsDuplicateElements" classname="edu.drexel.se320.PropertyTests" time="0.083"/>
-  <system-out><![CDATA[timestamp = 2026-10-28T17:42:20.674613500, PropertyTests:testTargetIsInFirstHalfOfTheArray = 
+  <testcase name="testTargetIsInFirstHalfOfTheArray" classname="edu.drexel.se320.PropertyTests" time="0.886"/>
+  <testcase name="testTargetIsInSecondHalfOfArray" classname="edu.drexel.se320.PropertyTests" time="0.12"/>
+  <testcase name="testUnsortedArrayWhenTargetIsNotInArray" classname="edu.drexel.se320.PropertyTests" time="0.168"/>
+  <testcase name="testEmptyArrayBehavior" classname="edu.drexel.se320.PropertyTests" time="0.075"/>
+  <testcase name="testTargetIsDuplicateElement" classname="edu.drexel.se320.PropertyTests" time="0.055"/>
+  <testcase name="testUnsortedArrayWhenTargetIsInArray" classname="edu.drexel.se320.PropertyTests" time="0.118"/>
+  <testcase name="testTargetIsTheLastElementInTheArray" classname="edu.drexel.se320.PropertyTests" time="0.061"/>
+  <testcase name="testTargetDoesntExistInArray" classname="edu.drexel.se320.PropertyTests" time="0.08"/>
+  <testcase name="testTargetExistsInArray" classname="edu.drexel.se320.PropertyTests" time="0.048"/>
+  <testcase name="testTargetIsTheFirstElementInTheArray" classname="edu.drexel.se320.PropertyTests" time="0.04"/>
+  <testcase name="testsingleElementInArray" classname="edu.drexel.se320.PropertyTests" time="0.094"/>
+  <testcase name="testTargetIsUniqueInArrayAndContainsDuplicateElements" classname="edu.drexel.se320.PropertyTests" time="0.07"/>
+  <system-out><![CDATA[timestamp = 2026-10-28T23:17:08.353131700, PropertyTests:testTargetIsInFirstHalfOfTheArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
-checks = 909                  | # of not rejected calls
+checks = 897                  | # of not rejected calls
 generation = RANDOMIZED       | parameters are randomly generated
 after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 25         | # of all combined edge cases
 edge-cases#tried = 25         | # of edge cases tried in current run
-seed = 3438575907526066868    | random seed to reproduce generated values
+seed = -2470972127270418439   | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:20.852162400, PropertyTests:testTargetIsInSecondHalfOfArray = 
+timestamp = 2026-10-28T23:17:08.498723500, PropertyTests:testTargetIsInSecondHalfOfArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
-checks = 898                  | # of not rejected calls
+checks = 913                  | # of not rejected calls
 generation = RANDOMIZED       | parameters are randomly generated
 after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 25         | # of all combined edge cases
 edge-cases#tried = 25         | # of edge cases tried in current run
-seed = -5142771844082326616   | random seed to reproduce generated values
+seed = -2957243584198663949   | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:20.945693800, PropertyTests:testEmptyArrayBehavior = 
+timestamp = 2026-10-28T23:17:08.667902900, PropertyTests:testUnsortedArrayWhenTargetIsNotInArray = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 854                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 40         | # of all combined edge cases
+edge-cases#tried = 40         | # of edge cases tried in current run
+seed = 8472699659256809777    | random seed to reproduce generated values
+
+
+timestamp = 2026-10-28T23:17:08.744034300, PropertyTests:testEmptyArrayBehavior = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -47,10 +62,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 9          | # of all combined edge cases
 edge-cases#tried = 9          | # of edge cases tried in current run
-seed = 5003410390416701280    | random seed to reproduce generated values
+seed = -7673217062203057550   | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:20.991225900, PropertyTests:testTargetIsDuplicateElement = 
+timestamp = 2026-10-28T23:17:08.800038700, PropertyTests:testTargetIsDuplicateElement = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -60,10 +75,23 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 5          | # of all combined edge cases
 edge-cases#tried = 5          | # of edge cases tried in current run
-seed = -6449910395452924939   | random seed to reproduce generated values
+seed = 2981006531753610451    | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.097763500, PropertyTests:testTargetIsTheLastElementInTheArray = 
+timestamp = 2026-10-28T23:17:08.920033, PropertyTests:testUnsortedArrayWhenTargetIsInArray = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 970                  | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 50         | # of all combined edge cases
+edge-cases#tried = 40         | # of edge cases tried in current run
+seed = 3145940793359606938    | random seed to reproduce generated values
+
+
+timestamp = 2026-10-28T23:17:08.981909400, PropertyTests:testTargetIsTheLastElementInTheArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -73,10 +101,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 5          | # of all combined edge cases
 edge-cases#tried = 5          | # of edge cases tried in current run
-seed = -7590056626031472889   | random seed to reproduce generated values
+seed = 2553271240034391272    | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.224307900, PropertyTests:testTargetDoesntExistInArray = 
+timestamp = 2026-10-28T23:17:09.064034400, PropertyTests:testTargetDoesntExistInArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -86,10 +114,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 20         | # of all combined edge cases
 edge-cases#tried = 20         | # of edge cases tried in current run
-seed = -1142878742475341187   | random seed to reproduce generated values
+seed = 2728042425624499816    | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.301835900, PropertyTests:testTargetExistsInArray = 
+timestamp = 2026-10-28T23:17:09.113696900, PropertyTests:testTargetExistsInArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -99,10 +127,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 25         | # of all combined edge cases
 edge-cases#tried = 25         | # of edge cases tried in current run
-seed = -2429315093163673682   | random seed to reproduce generated values
+seed = -3207709405187351269   | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.353835800, PropertyTests:testTargetIsTheFirstElementInTheArray = 
+timestamp = 2026-10-28T23:17:09.153404500, PropertyTests:testTargetIsTheFirstElementInTheArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -112,10 +140,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 5          | # of all combined edge cases
 edge-cases#tried = 5          | # of edge cases tried in current run
-seed = 508034037585020721     | random seed to reproduce generated values
+seed = -8458977761314742489   | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.485707400, PropertyTests:testsingleElementInArray = 
+timestamp = 2026-10-28T23:17:09.247772700, PropertyTests:testsingleElementInArray = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -125,20 +153,20 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 25         | # of all combined edge cases
 edge-cases#tried = 25         | # of edge cases tried in current run
-seed = 2061715807518036263    | random seed to reproduce generated values
+seed = 4708267646564368612    | random seed to reproduce generated values
 
 
-timestamp = 2026-10-28T17:42:21.569717400, PropertyTests:testTargetIsUniqueInArrayAndContainsDuplicateElements = 
+timestamp = 2026-10-28T23:17:09.320061800, PropertyTests:testTargetIsUniqueInArrayAndContainsDuplicateElements = 
                               |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
-checks = 1000                 | # of not rejected calls
+checks = 999                  | # of not rejected calls
 generation = RANDOMIZED       | parameters are randomly generated
 after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 0          | # of all combined edge cases
 edge-cases#tried = 0          | # of edge cases tried in current run
-seed = -8883514946063954430   | random seed to reproduce generated values
+seed = 4446668439754308058    | random seed to reproduce generated values
 
 
 ]]></system-out>
